@@ -8,9 +8,17 @@
     <title>Exercice 2 - Jquery</title>
 </head>
 <body>
-    <p class="mb-5">Au double click, modifier la largeur de l'image à 500px :</p>
+    <p class="mb-5">
+        Créer deux boutons, l'un pour incrémenter, l'autre pour décrémenter.<br>
+        Un input récupère les valeurs :
+    </p>
 
-    <img src="image/noun_empower_2909363.svg" alt="Illustration Empowerment" id="image" class="text-center">
+    <form class="form-inline justify-content-center">
+        <button id="displayInc" type="button" class="btn btn-light mb-2 mr-2">Incrémente !</button>
+        <button id="displayDec" type="button" class="btn btn-light mb-2 mr-2">Décrémente !</button>
+        <input id="inputCounter" type="text" class="form-control">
+        <button id="resetButton" type="button" type="button" class="btn btn-light mb-2 ml-2">Recommence !</button>  
+    </form>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="script.js"></script>

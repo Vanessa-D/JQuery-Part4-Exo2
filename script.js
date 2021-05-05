@@ -1,24 +1,28 @@
-// Changer la taille d'un élément 
+// Déclaration et initialisation d'une variable i --> compteur
+let i = 0;
 
-// $ --> JQuery() permet de transformer l'élément en objet JQuery
+$(function(){ 
+    // Au clic du bouton dispslayInc...
+    $('#displayInc').click(function(){
+        // On incrémente i
+        i++; 
+        // On affiche dans l'input la valeur de i incrémentée à chaque clic --> méthode val(paramètre)
+        $('#inputCounter').val(i);
+    });
 
+    // Au clic du bouton displayDec...
+    $('#displayDec').click(function(){
+        // On décrémente i
+        i--; 
+        // On affiche dans l'input la valeur de i décrémentée à chaque clic --> méthode val(paramètre)
+        $('#inputCounter').val(i);
+    });
 
-$(document).ready(function(){
-    $('#image').dblclick(function(){
-        $(this).css("width", "500px");
+    // Au clic du bouton resetButton...
+    $('#resetButton').click(function(){
+        // On affiche une valeur vide
+        $('#inputCounter').val('');
+        // On remet le compteur à 0
+        i = 0;
     });
 });
-
-
-
-//OR méthode animate() --> prend la taille précisée avec un effet
-
-
-
-// En JS vanilla, on aurait :
-/*
-let image = document.getElementById("image");
-image.addEventListener("dblclick", () => {
-    image.style.width = "500px";
-});
-*/
